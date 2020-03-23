@@ -1,0 +1,56 @@
+{:plan
+ [{:title "Lab8", :default {:check :all}}
+  (:check1 :Check)
+  (:check2 :Check)
+  (:check3 :Check)
+  (:check4 :Check)
+  (:check5 :Check)
+  (:check6 :Check)
+  (:check7 :Check)
+  (:check8 :Check)
+  (:check9 :Check)
+  (:check10 :Check)
+  (:check11 :Check)
+  (:check12 :Check)],
+ :results
+ [{:return nil, :duration 5, :stdout "3.14\n=> 3.14\n"}
+  {:return nil,
+   :duration 0,
+   :stdout "(mult 3.14 (mult 10.20 10.20))\n=> 326.84\n"}
+  {:return nil,
+   :duration 0,
+   :stdout "(blah 3.14 45.00)\n[err] Invalid op: blah\n"}
+  {:return nil,
+   :duration 1,
+   :stdout
+   "pi = 3.14\n=> 3.14\nr = 10.20\n=> 10.20\n(mult pi (mult r r))\n=> 326.84\n"}
+  {:return nil,
+   :duration 1,
+   :stdout "pi\n[err] Variable not declared: pi\n"}
+  {:return nil,
+   :duration 1,
+   :stdout
+   "r = 99.00\n=> 99.00\nif (lt r 100.00) then -1.00 else 1.00\n=> -1.00\nr = 101.00\n=> 101.00\nif (lt r 100.00) then -1.00 else 1.00\n=> 1.00\n"}
+  {:return nil,
+   :duration 0,
+   :stdout
+   "{\npi = 3.14\nr = 10.20\narea = (mult pi (mult r r))\n(plus area area)\n}\n=> 653.68\n"}
+  {:return nil,
+   :duration 2,
+   :stdout
+   "{\ni = 0.00\nsum = 0.00\nwhile (lt i 100.00) {\nsum = (plus sum i)\ni = (plus i 1.00)\n}\nsum\n}\n=> 4950.00\n"}
+  {:return nil,
+   :duration 1,
+   :stdout "{\nadd(i,j)(plus i j)\nadd(100.00,200.00)\n}\n=> 300.00\n"}
+  {:return nil,
+   :duration 0,
+   :stdout "blah()\n[err] Function not declared: blah\n"}
+  {:return nil,
+   :duration 0,
+   :stdout
+   "{\nadd(i,j)(plus i j)\nadd(10.00,20.00,30.00)\n}\n[err] Wrong number of arguments: 2 expected, 3 given\n"}
+  {:return nil,
+   :duration 14,
+   :stdout
+   "{\nfib(n)if (le n 2.00) then 1.00 else (plus fib((sub n 1.00)) fib((sub n 2.00)))\nfib(20.00)\n}\n=> 6765.00\n"}],
+ :version "1.0"}

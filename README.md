@@ -1,2 +1,2 @@
-# lab8
-A Java backend to a number language that is Turing complete.
+# lab8-solution
+Java backend for a programming language
